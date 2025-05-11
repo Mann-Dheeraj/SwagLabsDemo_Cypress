@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "allowJs": true,
+        "checkJs": true,
+        "jsx": "react",
+        "types": ["cypress", "node"]
+    },
+    "include": ["**/*.js", "**/*.jsx"],
+    "exclude": ["node_modules"]
+} 
