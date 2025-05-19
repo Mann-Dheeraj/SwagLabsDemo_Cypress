@@ -1,25 +1,25 @@
-name: run cypress tests without dockers
+name: Run Cypress Tests on Commit
 
-on: 
-  push: 
-    branches: 
+on:
+  push:
+    branches:
       - main
-  pull_request:
+      - master
 
-jobs: 
+jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    
-    steps: 
-      - name: checkout code
+
+    steps:
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: set up node.js
-        uses: actions/setupnode@actions@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install node dependincies
+      - name: Install dependencies
         run: npm install
 
       - name: Run Cypress tests
