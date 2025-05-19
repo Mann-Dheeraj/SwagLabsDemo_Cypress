@@ -1,5 +1,4 @@
 name: Run Cypress Tests on Commit
-
 on:
   push:
     branches:
